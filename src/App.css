@@ -1,0 +1,313 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  /* Colors */
+  --color-marine-blue: hsl(213, 96%, 18%);
+  --color-marine-blue-light: hsl(213, 95%, 25%);
+  --color-purplish-blue: hsl(243, 100%, 62%);
+  --color-purple: hsl(276, 73%, 50%);
+  --color-purplish-blue-light: hsl(243, 97%, 74%);
+  --color-pastel-blue: hsl(228, 100%, 84%);
+  --color-light-blue: hsl(206, 94%, 87%);
+  --color-strawberry-red: hsl(354, 84%, 57%);
+  
+  --color-cool-gray: hsl(231, 11%, 63%);
+  --color-cool-gray-light: hsl(231, 8%, 65%);
+  --color-gray-light: hsl(229, 24%, 87%);
+  --color-gray-lighter: hsl(0, 0%, 97.8%);
+  --color-magnolia: hsl(217, 100%, 97%);
+  --color-alabaster: hsl(231, 100%, 99%);
+  --color-white: hwb(0 100% 0%);
+
+
+  /* Typography */
+  --font-primary: 'Ubuntu', 'sans-serif'; 
+
+}
+
+
+
+/*-----------------------------------*\
+  #RESET & GLOBAL STYLES
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: var(--color-magnolia);
+  font-family: var(--font-primary);
+  height: 800px;
+}
+
+section {
+  display: flex;
+  position: absolute;
+  top: 100px;
+  width: 100%;
+}
+
+
+
+
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+h2, 
+h4,
+p {
+  font-family: var(--font-primary);
+}
+
+h2 {
+  color: var(--color-marine-blue);
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 0.25em;
+}
+
+h4 {
+  color: var(--color-marine-blue);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.35em;
+}
+
+p {
+  color: var(--color-cool-gray);
+  font-size: 1.1rem;
+  line-height: 1.5em;
+}
+
+.page-container {
+  background-color: var(--color-white);
+  margin: 0 1em;
+  width: 100%;
+  border-radius: 10px;
+  padding: 2em 1.4em;
+  box-shadow: 0px 10px 10px 1px rgba(105, 105, 105, 0.1);
+}
+
+.text-div {
+  margin-bottom: 2rem;
+}
+
+
+
+
+
+/*-----------------------------------*\
+  # APP COMPONENT STYLES
+\*-----------------------------------*/
+
+.background-image {
+  width: 100%;
+  position: relative;
+}
+
+.pages-number {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 35px;
+  left: 20%;
+  right: 20%;
+  justify-content: center;
+}
+
+.page-num {
+  border: 2px solid var(--color-light-blue);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-current {
+  background-color: var(--color-light-blue);
+}
+
+.index {
+  color: var(--color-light-blue);
+  font-weight: 800;
+  cursor: default;
+}
+
+.index-current-page {
+  color: var(--acolor-mrine-blue);
+}
+
+.bottom-div {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  height: 50px;
+  width: 122px;
+  cursor: pointer;
+}
+
+.back-btn {
+  background-color: transparent;
+  color: var(--color-cool-gray);
+  text-align: start;
+  font-weight: 500;
+}
+
+.back-btn:hover {
+  color: var(--color-marine-blue);
+}
+
+.next-btn {
+  background-color: var(--color-marine-blue);
+  color: var(--color-white);
+  border-radius: 8px;
+  margin-left: auto;
+  font-weight: 500;
+}
+
+.next-btn:hover {
+  background-color: var(--color-marine-blue-light);
+}
+
+.confirm-btn {
+  border-radius: 8px;
+  background-color: var(--color-purplish-blue);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.confirm-btn:hover {
+  background-color: var(--color-purplish-blue-light);
+}
+
+
+
+
+
+/*-----------------------------------*\
+  # MEDIA QUERIES
+\*-----------------------------------*/
+
+
+@media (min-width: 650px) {
+  .page-container {
+    margin: 0 4em;
+  }
+  
+  .bottom-div {
+    padding: 1.4em 4em;
+  }
+}
+
+
+@media (min-width: 800px) {
+  body {
+    height: unset;
+  }
+
+  main { 
+    display: grid;
+    place-items: center; 
+    height: 100vh;
+    width: 100vw; 
+  }
+
+  section {
+    position: unset;
+  }
+
+  .app-container {
+    display: flex;
+    padding: .8em 0 .8em .8em;
+    background-color: var(--color-white);
+    position: relative;
+    border-radius: 13px;
+  }
+
+  .pages-number {
+    flex-direction: column;
+    left: 50px;
+    top: 50px;
+    right: unset;
+    gap: 35px;
+  }
+
+  .page-num-div {
+    display: flex;
+  }
+
+  .page-num {
+    margin-right: 1em;
+  }
+
+  .page-text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .page-text-div p {
+    color: var(--color-pastel-blue);
+    font-size: .8rem;
+  }
+
+  .page-text-div span {
+    color: var(--color-white);
+    font-size: .9rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+  }
+
+  .page-container {
+    margin: 0 .8em;
+    padding: 2em 1.5em;
+    box-shadow: none;
+    width: 395px;
+  }
+  
+  .bottom-div {
+    padding: 1em 2.3em;
+    position: absolute;
+    right: 0;
+    bottom: 1em;
+    left: unset;
+    width: calc(100% - 271px - 1em);
+  }
+}
+
+
+@media (min-width: 1100px) {
+  .page-container {
+    margin: 0 3em;
+    width: 470px;
+  }
+
+  .bottom-div {
+    padding: 1em 4.5em;
+  }
+}
+
+
