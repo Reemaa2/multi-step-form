@@ -24,14 +24,10 @@ Users should be able to:
 
 |Mobile layout  | Desktop layout |
 | ------------- | ------------- |
-|   |  ![live website pic](src/assets/images/website-pic.png)  |
+| ![live website pic](src/assets/images/website-mobile-pic.png)  |  ![live website pic](src/assets/images/website-pic.png)  |
 
 
-
-
-
-@@@@@@@@@@@
-see the project [Live]()
+see the project [Live](https://multi-step-form-project-challengee.netlify.app)
 
 
 ## My process
@@ -41,16 +37,13 @@ see the project [Live]()
 - React
 - mobile-first workflow
 
-
-
-
-
 <br>
 
 ## Future Improvements
 
-@@@@@@@@@
+
 - [ ] Migrate to TypeScript for type safety.
+- [ ] Style with SCSS.
 
  
 
