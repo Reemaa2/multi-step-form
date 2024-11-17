@@ -44,6 +44,7 @@ see the project [Live](https://multi-step-form-project-challengee.netlify.app)
 
 - [ ] Migrate to TypeScript for type safety.
 - [ ] Style with SCSS.
+- [ ] Integrate Redux Toolkit for state management.
 
  
 
