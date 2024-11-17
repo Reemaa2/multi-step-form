@@ -27,7 +27,7 @@ Users should be able to:
 | ![live website pic](src/assets/images/website-mobile-pic.png)  |  ![live website pic](src/assets/images/website-pic.png)  |
 
 
-see the project [Live](https://multi-step-form-project-challengee.netlify.app)
+see the project [Live](https://multi-step-form-project-challenge.netlify.app)
 
 
 ## My process
