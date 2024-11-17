@@ -10,18 +10,18 @@ const ForthPage = (props) => {
   const [addOnsList, setAddOnsList] = React.useState([]);
 
 
-  React.useEffect(() => {
-    const List = getAddOnsList();
-    setAddOnsList(List);
-  },[]);
-
-
-   
-  function getAddOnsList() {
+  const getAddOnsList = React.useCallback(() => {
     const addOnsList = Object.keys(props.user.services.addOns)
       .filter(key => props.user.services.addOns[key]);
     return addOnsList;
-  }
+  }, [props.user.services.addOns]);
+
+  React.useEffect(() => {
+    const list = getAddOnsList();
+    setAddOnsList(list);
+  }, [getAddOnsList]);
+
+  
 
   function goToSecondPage() {
     props.setPages(prevPages => 
