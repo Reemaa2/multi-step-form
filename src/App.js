@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import backgroundImage from './assets/images/bg-sidebar-mobile.svg';
 import backgroundImageBig from './assets/images/bg-sidebar-desktop.svg';
-import FirstPage from './components/1-firstPage/FirstPage';
-import SecondPage from './components/2-secondPage/SecondPage';
-import ThirdPage from './components/3-thirdPage/ThirdPage';
-import ForthPage from './components/4-forthPage/ForthPage';
+import FirstPage from './components/firstPage/FirstPage';
+import SecondPage from './components/secondPage/SecondPage';
+import ThirdPage from './components/thirdPage/ThirdPage';
+import ForthPage from './components/forthPage/ForthPage';
 import { isValidEmail } from './utils';
 
 

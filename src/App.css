@@ -52,7 +52,6 @@ section {
   display: flex;
   position: absolute;
   top: 100px;
-  width: 100%;
 }
 
 
@@ -92,7 +91,6 @@ p {
 .page-container {
   background-color: var(--color-white);
   margin: 0 1em;
-  width: 100%;
   border-radius: 10px;
   padding: 2em 1.4em;
   box-shadow: 0px 10px 10px 1px rgba(105, 105, 105, 0.1);
@@ -111,7 +109,6 @@ p {
 \*-----------------------------------*/
 
 .background-image {
-  width: 100%;
   position: relative;
 }
 
@@ -120,9 +117,8 @@ p {
   gap: 20px;
   position: absolute;
   top: 35px;
-  left: 20%;
-  right: 20%;
   justify-content: center;
+  margin: 0 25% 0 25%;
 }
 
 .page-num {
@@ -212,13 +208,61 @@ p {
 \*-----------------------------------*/
 
 
-@media (min-width: 650px) {
+@media (min-width: 200px) {
+  .page-container {
+    width: 300px;
+    margin: 0 2.4em;
+    padding: 2em 1em;
+  }
+
+  .bottom-div {
+    padding: 1.4em 2.4em;
+  }
+}
+
+
+@media (min-width: 350px) {
+  .background-image {
+    width: 100% ;
+  }
+
+  .page-container {
+    margin: 0 1.4em;
+    padding: 2em 1.4em;
+    width: unset;
+  }
+
+  .pages-number {
+    left: 20%;
+    right: 20%;
+    margin: 0;
+  }
+
+  .bottom-div {
+    padding: 1.4em 1.4em;
+  }
+}
+
+
+@media (min-width: 550px) {
   .page-container {
     margin: 0 4em;
   }
-  
+
   .bottom-div {
     padding: 1.4em 4em;
+  }
+}
+
+
+@media (min-width: 650px) {
+  .page-container {
+    margin: 0 7em;
+    width: 550px;
+  }
+  
+  .bottom-div {
+    padding: 1.4em 7em;
   }
 }
 
