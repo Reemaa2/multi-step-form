@@ -1,0 +1,100 @@
+@use '../variables' as vars;
+@use '../mixins';
+
+.btns-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: vars.$white;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+
+  .btn {
+    border: none;
+    font-family: vars.$font-primary;
+    font-size: 1rem;
+    height: 50px;
+    width: 122px;
+    cursor: pointer;
+
+    &.back-btn {
+      background-color: transparent;
+      color: vars.$cool-gray;
+      text-align: start;
+      font-weight: 500;
+
+      &:hover {
+        color: vars.$marine-blue;
+      }
+    }
+
+    &.confirm-btn {
+      border-radius: 8px;
+      background-color: vars.$purplish-blue;
+      color: vars.$white;
+      font-weight: 600;
+
+      &:hover {
+      background-color: vars.$purplish-blue-light;
+      }
+    }
+    
+    &.next-btn {
+      background-color: vars.$marine-blue;
+      color: vars.$white;
+      border-radius: 8px;
+      margin-left: auto;
+      font-weight: 500;
+
+      &:hover {
+        background-color: vars.$marine-blue-light;
+      }
+    }
+  }
+}
+
+
+@include mixins.media(xs) {
+  .btns-container {
+    padding: 1.4em 2.3em;
+  }
+}
+
+@include mixins.media(s) {
+  .btns-container {
+    padding: 1.4em;
+  }
+}
+
+@include mixins.media(md) {
+  .btns-container {
+    padding: 1.4em 4em;  
+  }
+}
+
+@include mixins.media(lg) {
+  .btns-container {
+    padding: 1.4em 6.8em;
+  }
+}
+
+@include mixins.media(xl) {
+  .btns-container {
+    padding: 1em 2.3em;
+    position: absolute;
+    right: 0;
+    bottom: 1em;
+    left: unset;
+    width: calc(100% - 271px - 1em);
+  }
+}
+
+@include mixins.media(2xl) {
+  .btns-container {
+    padding: 1em 4.5em;
+  }
+}
+
+

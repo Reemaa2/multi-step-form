@@ -1,0 +1,91 @@
+@use '../variables' as vars;
+@use '../mixins';
+
+.plan-btns-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+
+  .plan-btn {
+    background-color: vars.$white;
+    border: 1px solid vars.$gray-light;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      border-color: vars.$purple;
+    }
+
+    &.clicked {
+      background-color: vars.$gray-lighter;
+      border-color: vars.$purple;
+    }
+
+    & img {
+      margin-right: 1.2em;
+    }
+
+    .btn-text {
+      text-align: start;
+
+      p {
+        font-size: .99rem;
+        margin-bottom: .5em;
+        line-height: unset;
+      }
+
+      span {
+        color: vars.$marine-blue;
+        margin: 0;
+        font-family: vars.$font-primary;
+        font-weight: 600;
+        font-size: .8em;
+      }
+    }
+  }
+}
+
+
+@include mixins.media(xl) {
+  .plan-btns-container {
+    flex-direction: row;
+    justify-content: space-between; 
+
+    .plan-btn {
+      width: 32%;
+      max-width: 170px;
+      flex-direction: column;
+      align-items: start;
+      padding: .6em;
+
+      & img {
+        margin: .5em 0em 3em 0em;
+      }
+    }
+  }
+}
+
+
+@include mixins.media(2xl) {
+  .plan-btn {
+    max-width: 130px;
+    padding: .8em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

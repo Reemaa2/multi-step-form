@@ -1,0 +1,24 @@
+@use '../variables' as vars;
+@use '../mixins';
+
+.thanks-div {
+  padding: 3rem 0;
+  text-align: center;
+  
+  img {
+    margin-bottom: 1.4em;
+  }
+}
+
+
+@include mixins.media(md) {
+  .wishes-p {
+    padding: 0 4em;
+  }
+}
+
+@include mixins.media(xl) {
+  .thanks-div {
+    padding: 6em 0;
+  }
+}

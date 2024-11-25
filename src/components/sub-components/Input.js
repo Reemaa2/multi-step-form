@@ -31,9 +31,9 @@ const Input = (props) => {
 
 
   return (
-    <div className="input-div">
+    <div className="input-container">
       <div className="input-text-div">
-        <label>{props.label}</label>
+        <label htmlFor={props.name}>{props.label}</label>
         { isEmpty && <span className="error-message">This field is required</span>} 
         
         {props.name === 'email' && !props.isEmailValid && 
@@ -42,7 +42,8 @@ const Input = (props) => {
         </span>} 
       </div>
       <input 
-        className={`first-page-input ${isEmpty  && 'error'} ${inputIsFocused && 'focus'}`}
+        className={`info-input ${isEmpty  && 'error'} ${inputIsFocused && 'focus'}`}
+        id={props.name}
         placeholder={props.placeholder}
         type={props.name === 'phone' ? 'number' : 'text'}
         name={props.name}

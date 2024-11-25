@@ -1,0 +1,92 @@
+@use '../variables' as vars;
+@use '../mixins';
+
+.header {
+  .background-image {
+    position: relative;
+  }
+
+  .pages-number {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 35px;
+    justify-content: center;
+    margin: 0 25% 0 25%;
+
+    .step {
+      .circle {
+        border: 2px solid vars.$light-blue;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.active {
+          background-color: vars.$light-blue;
+        }
+
+        .number {
+          color: vars.$light-blue;
+          font-weight: 800;
+          cursor: default;
+  
+          &.current {
+          color: vars.$marine-blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include mixins.media(s) {
+  .background-image {
+    width: 100%;
+  }
+
+  .pages-number {
+    left: 20%;
+    right: 20%;
+    margin: 0;
+  }
+}
+
+@include mixins.media(xl) {
+  .pages-number {
+    flex-direction: column;
+    left: 50px;
+    top: 50px;
+    right: unset;
+    gap: 35px;
+
+    .step {
+      display: flex;
+
+      .circle {
+        margin-right: 1em;
+      }
+
+      .label {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+        p {
+          color: vars.$pastel-blue;
+          font-size: .8rem;
+        }
+    
+        span {
+          color: vars.$white;
+          font-size: .9rem;
+          font-weight: 800;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

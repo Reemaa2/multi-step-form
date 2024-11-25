@@ -1,5 +1,4 @@
-import './thirdPage.css';
-import Checkbox from '../sub-components/Checkbox';
+import Checkbox from './sub-components/Checkbox';
 import React from 'react';
 
 
@@ -8,12 +7,12 @@ const ThirdPage = (props) => {
   return (
     <section>
       <div className='page-container'>
-        <div className="text-div">
+        <div className="page-info">
           <h2>Pick add-ons</h2>
           <p>Add-ons help enhance your gaming experience.</p>
         </div>
 
-        <div className='checkboxes-container'>
+        <div>
           <Checkbox 
             name='onlineService'
             info='Access to multiplayer games'

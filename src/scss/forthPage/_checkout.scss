@@ -1,0 +1,95 @@
+@use '../variables' as vars;
+@use '../mixins';
+.checkout {
+  .calculation-div {
+    background-color: vars.$gray-lighter;
+    padding: 1em .8em;
+    border-radius: 10px;
+    margin-bottom: 2em;
+
+    .plan-calc {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .plan-calc-text {
+        display: flex;
+        flex-direction: column;
+
+        p {
+          color: vars.$marine-blue;
+          font-weight: 600;
+        }
+
+        .span-div {
+          display: flex;
+
+          span {
+            color: vars.$cool-gray;
+            text-decoration: underline;
+            cursor: pointer;
+
+            &:hover {
+              color: vars.$purplish-blue;
+            }
+          }
+        }
+
+        .plan-price {
+          color: vars.$marine-blue;
+          font-weight: 600;
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .line {
+      margin-top: 1em;
+      margin-bottom: .8em;
+      border-bottom: 1px solid vars.$gray-light;
+    }
+
+    .add-ons-calc {
+      display: flex;
+      flex-direction: column;
+      gap: .8em;
+
+      .add-on {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          color: vars.$marine-blue;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+
+  .total-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .6em;
+
+    span {
+      font-size: 1.4rem;
+      color: vars.$purplish-blue;
+      font-weight: 600;
+    }
+  }
+}
+
+
+@include mixins.media(md) {
+  .calculation-div {
+    padding: 1.2em 1em;
+  }
+}
+
+@include mixins.media(xl) {
+  .line {
+    margin-top: 1.5em;
+  }
+}

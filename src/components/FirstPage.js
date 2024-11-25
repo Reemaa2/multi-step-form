@@ -1,11 +1,10 @@
-import './firstPage.css';
-import Input from "../sub-components/Input";
+import Input from "./sub-components/Input";
 
 const FirstPage = (props) => {
   return (
     <section>
       <div className='page-container'>
-        <div className="text-div">
+        <div className="page-info">
           <h2>Personal info</h2>
           <p>Please provide your name, email, address and phone number</p>
         </div>

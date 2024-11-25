@@ -1,0 +1,79 @@
+@use '../variables' as vars;
+@use '../mixins';
+
+.checkbox-div {
+  border: 1px solid vars.$gray-light;
+  padding: .8em;
+  margin-bottom: 1em;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:last-child {
+    margin-bottom: .5em;
+  }
+
+  &:hover {
+    border-color: vars.$purple;
+  }
+
+  &.clicked {
+    background-color: vars.$gray-lighter;
+    border-color: vars.$purple;
+  }
+
+  .checkbox-text-contianer {
+    display: flex;
+    gap: 15px;
+
+    input {
+      width: 15px;
+      cursor: pointer;
+    }
+
+    .checkbox-text-div {
+     
+      label {
+        color: vars.$marine-blue;
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: .3em;
+      }
+
+      p {
+        font-size: .99rem;
+        margin-bottom: .5em;
+        line-height: unset;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  span {
+    color: vars.$purple;
+    font-size: 1em;
+  }
+}
+
+
+@include mixins.media(xs) {
+  .checkbox-text-div {
+    width: 141px;
+  }
+}
+
+@include mixins.media(s) {
+  .checkbox-div {
+    justify-content: space-between;
+
+    .checkbox-text-div {
+      width: unset;
+    }
+  }
+}
+
+
+
+
+

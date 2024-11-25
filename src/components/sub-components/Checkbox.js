@@ -45,17 +45,17 @@ const Checkbox = (props) => {
         <input 
           type="checkbox"
           name={props.name}
+          id={props.name}
           checked={props.user.services.addOns[props.name]}
           onChange={handleChange}
         ></input>
+
         <div className="checkbox-text-div">
-          
-          <h4>{formatAddOns(props.name)}</h4>
+          <label htmlFor={props.name}>{formatAddOns(props.name)}</label>
           <p>{props.info}</p>
         </div>
       </div>
       
-
       <span>{`+$${prices.addOns[props.name][props.user.planPeriod]}/${props.planPeriodShort}`}</span>
     </div>
   )
