@@ -36,6 +36,7 @@ see the project [Live](https://multi-step-form-project-challenge.netlify.app)
 
 - React
 - mobile-first workflow
+- scss
 
 <br>
 
@@ -43,7 +44,7 @@ see the project [Live](https://multi-step-form-project-challenge.netlify.app)
 
 
 - [ ] Migrate to TypeScript for type safety.
-- [ ] Style with SCSS.
+- [x] Style with SCSS.
 - [ ] Integrate Redux Toolkit for state management.
 
  
