@@ -1,0 +1,59 @@
+@use '../variables' as vars;
+@use '../mixins';
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.4em;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .input-text-div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .4em;
+
+    label {
+      color: vars.$marine-blue;
+    }
+
+    .error-message {
+      color: vars.$strawberry-red;
+      font-weight: 600;
+      font-size: .8rem;
+    }
+  }
+
+  .info-input {
+    padding: .8em;
+    border: 1px solid vars.$gray-light;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    outline: none;
+    color: vars.$marine-blue;
+    font-family: vars.$font-primary;
+
+    /* Hide arrows in Chrome, Safari, and Opera */
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &::placeholder {
+      font-weight: 500;
+      color: vars.$cool-gray-light;
+    }
+
+    &.error {
+      border-color: vars.$strawberry-red;
+    }
+
+    &.focus {
+      border-color: vars.$purple;
+    }
+  }
+}

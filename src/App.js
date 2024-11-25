@@ -1,11 +1,10 @@
 import React from 'react';
-import './App.css';
 import backgroundImage from './assets/images/bg-sidebar-mobile.svg';
 import backgroundImageBig from './assets/images/bg-sidebar-desktop.svg';
-import FirstPage from './components/firstPage/FirstPage';
-import SecondPage from './components/secondPage/SecondPage';
-import ThirdPage from './components/thirdPage/ThirdPage';
-import ForthPage from './components/forthPage/ForthPage';
+import FirstPage from './components/FirstPage';
+import SecondPage from './components/SecondPage';
+import ThirdPage from './components/ThirdPage';
+import ForthPage from './components/ForthPage';
 import { isValidEmail } from './utils';
 
 
@@ -117,12 +116,12 @@ function App() {
 
 
   const numbersDiv = pages.map((page, index) => (
-    <div className='page-num-div' key={page.number}>
-      <div className={`page-num ${page.status && 'page-current'}`}>
-        <div className={`index ${page.status && 'index-current-page'}`}>{index + 1}</div>
+    <div className='step' key={page.number}>
+      <div className={`circle ${page.status && 'active'}`}>
+        <div className={`number ${page.status && 'current'}`}>{index + 1}</div>
       </div>
       {isDesktopView && 
-      <div className='page-text-div'>
+      <div className='label'>
         <p>{`STEP ${index + 1}`}</p>
         <span>{page.label}</span>
       </div>}
@@ -134,9 +133,9 @@ function App() {
   return (
     <main>
       <div className='app-container'>
-        <div className='top-div'>
+        <div className='header'>
           {<img src={isDesktopView ? backgroundImageBig : backgroundImage} alt='background' 
-            className={`${isDesktopView? 'background-image-big' : 'background-image'}`}>
+            className={`${isDesktopView? '' : 'background-image'}`}>
           </img>}
 
           <div className='pages-number'>
@@ -150,7 +149,7 @@ function App() {
         {pages[3].status && <ForthPage user={user} confirm={confirm} setConfirm={setConfirm} setPages={setPages} planPeriodShort={planPeriodShort}/>} 
 
         {!confirm && (
-          <div className='bottom-div'>
+          <div className='btns-container'>
           {showBackBtn  && <button className='btn back-btn' onClick={goBack}>Go Back</button>}
           {showConfirmBtn && <button className='btn confirm-btn' onClick={confirming}>Confirm</button>}
           {showNextBtn && <button className='btn next-btn' onClick={goNextPage}>Next Step</button>}

@@ -1,8 +1,7 @@
 import React from 'react';
-import './forthPage.css';
-import thankImage from '../../assets/images/icon-thank-you.svg';
-import { formatAddOns } from '../../utils';
-import { prices } from '../../prices';
+import thankImage from '../assets/images/icon-thank-you.svg';
+import { formatAddOns } from '../utils';
+import { prices } from '../prices';
 
 
 const ForthPage = (props) => {
@@ -66,10 +65,10 @@ const ForthPage = (props) => {
       <section>
         <div className='page-container'>
           <div className='thanks-div'>
-            <img src={thankImage} alt='checked '></img>
+            <img src={thankImage} alt='checked'></img>
             <h2>Thank you!</h2>
             <p>Thanks for confiming your subscription!</p>
-            <p className='last-p'>We hope you have fun using our platform. If you ever need support,
+            <p className='wishes-p'>We hope you have fun using our platform. If you ever need support,
               please feel free to email us at support@loremgaming.com.
             </p>
           </div>
@@ -82,13 +81,13 @@ const ForthPage = (props) => {
   return (
     <section>
       <div className='page-container'>
-        <div className="text-div">
+        <div className="page-info">
           <h2>Finishing up</h2>
           <p>Double-check everything looks OK before confirming.</p>
         </div>
 
 
-        <div>
+        <div className='checkout'>
           <div className="calculation-div">
             
             <div className="plan-calc">

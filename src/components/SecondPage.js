@@ -1,9 +1,9 @@
 import React from 'react';
-import './secondPage.css';
-import Button from '../sub-components/Button';
-import arcadeIcon from '../../assets/images/icon-arcade.svg';
-import advancedIcon from '../../assets/images/icon-advanced.svg';
-import proIcon from '../../assets/images/icon-pro.svg';
+import Button from './sub-components/Button';
+import arcadeIcon from '../assets/images/icon-arcade.svg';
+import advancedIcon from '../assets/images/icon-advanced.svg';
+import proIcon from '../assets/images/icon-pro.svg';
+
 
 
 const SecondPage = (props) => {
@@ -23,13 +23,13 @@ const SecondPage = (props) => {
     <section>
       <div className='page-container'>
         
-        <div className="text-div">
+        <div className="page-info">
           <h2>Select your plan</h2>
           <p>You have the option of monthly or yearly billing.</p>
         </div>
 
         
-        <div className="btns-container">
+        <div className="plan-btns-container">
           <Button 
             image={arcadeIcon}
             name='Arcade'
@@ -56,7 +56,7 @@ const SecondPage = (props) => {
         </div>
         
 
-        <div className='toggle-div'>
+        <div className='toggle-container'>
           <span className={`plan-period ${props.user.planPeriod === 'monthly' && 'selected-plan'}`}>Monthly</span>
           <input 
             type='checkbox'  

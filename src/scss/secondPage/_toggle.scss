@@ -1,0 +1,60 @@
+@use '../variables' as vars;
+@use '../mixins';
+
+.toggle-container {
+  display: flex;
+  background-color: vars.$gray-lighter;
+  justify-content: center;
+  padding: 1em;
+  align-items: center;
+  border-radius: 8px;
+
+  .plan-period {
+    font-size: 1rem;
+    font-weight: 600;
+    color: vars.$cool-gray;
+
+    &.selected-plan {
+      color: vars.$marine-blue;
+    }
+  }
+
+  .toggle-input {
+    appearance: none;
+    position: relative;
+    width: 40px;
+    height: 22px;
+    background-color: vars.$marine-blue;
+    border-radius: 2rem;
+    padding: .3em ;
+    margin: 0 1.2em;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 23px;
+      height: 14px;
+      width: 14px;
+      background-color: vars.$white;
+      border-radius: 50%;
+      transition: 0.6s ease all;
+    }
+
+    &:checked::before {
+      left: 3px;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
